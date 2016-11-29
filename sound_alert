@@ -1,0 +1,12 @@
+#!/bin/bash
+
+FILE=/home/pi/alert.txt
+
+while :; do
+   if [ -a $FILE ];
+      then omxplayer /home/pi/LibraryProject/shortbell.wav
+      rm -f /home/pi/alert.txt
+   else
+      echo "Searching for file"
+   fi
+done
